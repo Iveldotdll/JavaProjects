@@ -1,0 +1,51 @@
+// Matrix Calculator
+
+//Declaring Global Variables
+let matrix1 = [[],[]];
+let matrix2 = [[],[]];
+let ans = [[],[]];
+
+//Input for matrix1
+for (let i = 0; i <= 1; i++) {
+    for (let j = 0; j <= 1; j++) {
+        matrix1[i][j] = parseInt(prompt("Enter a number for matrix 1: "));
+    }
+}
+
+//Input for matrix2
+for (let i = 0; i <= 1; i++) {
+    for (let j = 0; j <= 1; j++) {
+        matrix2[i][j] = parseInt(prompt("Enter a number for matrix 2: "));
+    }
+}
+
+let opp = prompt("Select an operator: (+,-)");
+
+console.log(matrix1);//output matrix1
+console.log(matrix2);//output matrix2
+
+switch (opp) {
+    
+    //case for addition
+    case '+':
+        for (let i = 0; i <= 1; i++) {
+    for (let j = 0; j <= 1; j++) {
+        ans[i][j] = matrix1[i][j] + matrix2[i][j];
+    }
+} break;
+
+    //case for subtraction
+    case '-':
+        for (let i = 0; i <= 1; i++) {
+    for (let j = 0; j <= 1; j++) {
+        ans[i][j] = matrix1[i][j] - matrix2[i][j];
+    }
+} break;
+    
+    //default case
+    default:
+    console.log("Invalid Operator.");
+    break;
+}
+
+console.log(ans);

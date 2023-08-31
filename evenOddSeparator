@@ -1,0 +1,29 @@
+// Odd - Even Separator
+
+let n = parseInt(prompt("How many numbers do you want to sort?: "));
+
+let list = [n];
+
+for (let j = 0; j <= n-1; j++) {
+    list[j] = parseInt(prompt("Enter a number: "));
+}
+
+
+let listEven = [];
+let listOdd = [];
+list.sort();
+
+for (let i = 0; i <= list.length-1; i++) {
+    if (list[i] % 2 == 0) {
+    listEven.push(list[i]); 
+    } else {
+        listOdd.push(list[i]);
+    }
+}
+let choice = prompt("Sort for even or odd numbers: ");
+
+if (choice == 'even') {
+    console.log(listEven);
+} else {
+    console.log(listOdd);
+}
